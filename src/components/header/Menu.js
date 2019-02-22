@@ -1,22 +1,35 @@
-import React, { Component } from 'react';
-import Button from "./Button"
+import React from 'react';
+import Button from './Button';
+import { StylesContext } from '../../App';
 
-class Menu extends Component{
-    render(){
-        const buttonStyle = this.props.styleObj.Vidmain.Button
-        const {updateWindow, window} = this.props
-    return(
-        <div className = "container py-4">
-        <div className = "row">
-        <div className = "col-sm-6 text-center text-light">
-        <Button choice = {'Watch our Videos'} styleObj = {buttonStyle} updateWindow = {updateWindow} window = {window} select={'video'}/>
+export default function Menu(props) {
+  const { updateWindow, window } = props;
+  return (
+    <StylesContext.Consumer>
+      {styles => (
+        <div className="container py-4">
+          <div className="row">
+            <div className="col-sm-6 text-center text-light">
+              <Button
+                text="Watch our Videos"
+                styleObj={styles.VideoMain.Button}
+                updateWindow={updateWindow}
+                window={window}
+                select={'video'}
+              />
+            </div>
+            <div className="col-sm-6 text-center text-light">
+              <Button
+                text="About and Contact"
+                styleObj={styles.VideoMain.Button}
+                updateWindow={updateWindow}
+                window={window}
+                select={'about'}
+              />
+            </div>
+          </div>
         </div>
-        <div className = "col-sm-6 text-center text-light">
-        <Button choice = {'About and Contact'} styleObj = {buttonStyle} updateWindow = {updateWindow} window = {window} select = {'about'}/>
-        </div>
-        </div>
-        </div>
-        )}
+      )}
+    </StylesContext.Consumer>
+  );
 }
-
-export default Menu

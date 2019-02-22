@@ -1,46 +1,47 @@
 #App {
+  height: 100vh;
   background-size: 100%;
   background-repeat: no-repeat;
   background-position: center;
-  background-color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   animation-duration: 10s;
   animation-iteration-count: infinite;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-@keyframes shadow-pulse
-{
-     0% {
-          box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
-     }
-     80%{
-      box-shadow: 0 0 0 65px #FC7A3D;
-     }
-     100% {
-          box-shadow: 0 0 0 0px rgba(255,255,255,0.6);
-     }
+@keyframes shadow-pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.2);
+  }
+  80% {
+    box-shadow: 0 0 0 65px #fc7a3d;
+  }
+  100% {
+    box-shadow: 0 0 0 0px rgba(255, 255, 255, 0.6);
+  }
 }
 
-body{
-  background-color:#252E4F;
-  font-family: "Noto Sans", sans-serif;
+body {
+  background-color: #252e4f;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.selectedButton{
-  border:.2em solid #FC7A3D;
+.selectedButton {
+  border: 0.2em solid #fc7a3d;
 }
-.selectedButton:focus {outline:0;}
+.selectedButton:focus {
+  outline: 0;
+}
 
-.button{
+.button {
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
 }
 
 .button:hover {
-  background-color:#FC7A3D !important;
+  background-color: #fc7a3d !important;
 }
 
-.pulse{
-       animation: shadow-pulse 1.5s infinite;
-  }
-  
+.pulse {
+  animation: shadow-pulse 1.5s infinite;
+}

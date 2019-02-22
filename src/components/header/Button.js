@@ -1,15 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Button extends Component {
-    render(){
-        // console.log(this.props.selected)
-        const selected = this.props.select === this.props.window ? "button selectedButton": "button"
-        return (
-            <button className = {selected} style = {this.props.styleObj} onClick = {()=>{this.props.updateWindow(this.props.select)}}>
-                {this.props.choice} 
-            </button>
-        )
-    }
+export default function Button(props) {
+  const isSelected = props.select === props.window;
+  return (
+    <button
+      className={isSelected ? 'button selectedButton' : 'button'}
+      onClick={() => props.updateWindow(props.select)}
+    >
+      {props.text}
+    </button>
+  );
 }
-
-export default Button
